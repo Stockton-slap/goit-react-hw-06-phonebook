@@ -1,7 +1,11 @@
-import { Item } from './ContactItem.styled';
+const ContactItem = ({ contact }) => {
+  const { name, number } = contact;
 
-const ContactItem = () => {
-  return <Item></Item>;
+  return (
+    <li>
+      {name} {number}
+    </li>
+  );
 };
 
 export default ContactItem;

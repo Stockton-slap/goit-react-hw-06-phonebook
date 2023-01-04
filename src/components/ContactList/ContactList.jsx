@@ -13,7 +13,7 @@ const ContactList = () => {
     <Container>
       <List>
         {contacts.map(contact => (
-          <ContactItem />
+          <ContactItem contact={contact} key={contact.id} />
         ))}
       </List>
     </Container>

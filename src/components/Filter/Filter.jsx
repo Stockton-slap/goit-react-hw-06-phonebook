@@ -1,16 +1,18 @@
-import { FilterWrapper, FilterLabel, FilterValue } from './Filter.styled';
+import { Wrapper, FilterLabel, FilterValue } from './Filter.styled';
 import ContactList from 'components/ContactList';
 
 const Filter = () => {
   return (
-    <FilterWrapper>
-      <FilterLabel>
-        Find contacts by name
-        <br />
-        <FilterValue />
-      </FilterLabel>
+    <>
+      <Wrapper>
+        <FilterLabel>
+          Find contacts by name
+          <br />
+          <FilterValue />
+        </FilterLabel>
+      </Wrapper>
       <ContactList />
-    </FilterWrapper>
+    </>
   );
 };
 

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin: 0 auto;
-
-  outline: 2px solid green;
-  width: 200px;
-  height: 200px;
+  margin-top: 20px;
 `;
 
-export const List = styled.ul``;
+export const List = styled.ul`
+  margin: 0;
+  padding: 0;
+  text-align: center;
+`;
