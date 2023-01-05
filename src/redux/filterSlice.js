@@ -9,7 +9,7 @@ const filterSlice = createSlice({
     updateFilter(state, action) {
       state = action.payload;
 
-      return state;
+      return action.payload;
     },
   },
 });
