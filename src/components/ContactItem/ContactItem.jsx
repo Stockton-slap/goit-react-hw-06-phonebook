@@ -15,7 +15,7 @@ const ContactItem = ({ contact }) => {
 
   return (
     <Item>
-      {name} {number}
+      {name}: {number}
       <DeleteBtn type="button" onClick={handleClick}>
         Delete
       </DeleteBtn>
