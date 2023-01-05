@@ -1,12 +1,10 @@
 import { Wrapper, FilterLabel, FilterValue } from './Filter.styled';
+
 import ContactList from 'components/ContactList';
 
 import { useDispatch } from 'react-redux';
-
 import { getFilter } from 'redux/selectors';
-
 import { useSelector } from 'react-redux';
-
 import { updateFilter } from 'redux/filterSlice';
 
 const Filter = () => {
@@ -21,16 +19,14 @@ const Filter = () => {
   };
 
   return (
-    <>
-      <Wrapper>
-        <FilterLabel>
-          Find contacts by name
-          <br />
-          <FilterValue type="text" value={filter} onChange={handleChange} />
-        </FilterLabel>
-        <ContactList />
-      </Wrapper>
-    </>
+    <Wrapper>
+      <FilterLabel>
+        Find contacts by name
+        <br />
+        <FilterValue type="text" value={filter} onChange={handleChange} />
+      </FilterLabel>
+      <ContactList />
+    </Wrapper>
   );
 };
 

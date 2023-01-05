@@ -6,7 +6,6 @@ import {
 } from './ContactForm.styled';
 
 import { useDispatch } from 'react-redux';
-
 import { addContact } from 'redux/contactsSlice';
 import { useState } from 'react';
 

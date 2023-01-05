@@ -3,11 +3,8 @@ import { Container, List } from './ContactList.styled';
 import ContactItem from 'components/ContactItem';
 
 import { useSelector } from 'react-redux';
-
 import { getContacts } from 'redux/selectors';
-
 import { getFilter } from 'redux/selectors';
-
 import { useMemo } from 'react';
 
 const ContactList = () => {
@@ -16,8 +13,8 @@ const ContactList = () => {
 
   const filteredContacts = useMemo(
     () =>
-      contacts.filter(contact => {
-        const normalizedFilter = contact.name
+      contacts.filter(({ name }) => {
+        const normalizedFilter = name
           .toLowerCase()
           .includes(filter.trim().toLowerCase());
 
