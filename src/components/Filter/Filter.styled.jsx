@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const FilterLabel = styled.label`
