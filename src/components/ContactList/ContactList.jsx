@@ -9,6 +9,7 @@ import { useMemo } from 'react';
 
 const ContactList = () => {
   const contacts = useSelector(getContacts);
+
   const filter = useSelector(getFilter);
 
   const filteredContacts = useMemo(

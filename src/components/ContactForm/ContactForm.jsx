@@ -5,13 +5,20 @@ import {
   AddBtn,
 } from './ContactForm.styled';
 
+import Notiflix from 'notiflix';
+
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+
+import { getContacts } from 'redux/selectors';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+
+  const contacts = useSelector(getContacts);
 
   const dispatch = useDispatch();
 
@@ -33,10 +40,18 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    dispatch(addContact(name, number));
+    const a = contacts.find(contact => contact.name === name);
 
-    setName('');
-    setNumber('');
+    console.log(a);
+
+    if (!a) {
+      dispatch(addContact(name, number));
+
+      setName('');
+      setNumber('');
+    } else {
+      Notiflix.Notify.warning('There is ');
+    }
   };
 
   return (
