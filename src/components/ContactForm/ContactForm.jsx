@@ -50,7 +50,7 @@ const ContactForm = () => {
       setName('');
       setNumber('');
     } else {
-      Notiflix.Notify.warning('There is ');
+      Notiflix.Notify.warning('There is already a contact with such a name.');
     }
   };
 
