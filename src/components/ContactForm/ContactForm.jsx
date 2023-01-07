@@ -40,11 +40,9 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    const a = contacts.find(contact => contact.name === name);
+    const existedName = contacts.find(contact => contact.name === name);
 
-    console.log(a);
-
-    if (!a) {
+    if (!existedName) {
       dispatch(addContact(name, number));
 
       setName('');
